@@ -16,8 +16,8 @@ body {
 }
 
 .quick-access-bar {
-  background-color: #ffffff; /* Set the background color to white */
-  color: #ee5858; /* Set text color to dark */
+  background-color: #fff;
+  color: #333; 
   padding: 10px 0;
   text-align: center;
   width: 100%;
@@ -28,17 +28,17 @@ body {
 
 .quick-access-bar a {
   text-decoration: none;
-  color: #333; /* Set the link text color */
+  color: #333; 
   margin: 0 20px;
-  padding: 5px 10px; /* Add padding to create button-like styling */
-  border: 1px solid #333; /* Add border for the button look */
+  padding: 5px 10px; 
+  border: 1px solid #333; 
   border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+  transition: background-color 0.3s, color 0.3s; 
 }
 
 .quick-access-bar a:hover {
-  background-color: #333; /* Change background color on hover */
-  color: #fff; /* Change text color on hover */
+  background-color: #0adbee; 
+  color: #fff; 
 }
 
 .frontpg {
@@ -46,7 +46,7 @@ body {
   border-radius: 20px;
   backdrop-filter: blur(2px);
   padding: 20px;
-  margin-top: 60px; /* Add margin to create space between the navigation bar and content */
+  margin-top: 60px; 
   display: flex;
   flex-direction: column;
   align-items: center;
