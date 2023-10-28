@@ -1,81 +1,86 @@
-body{
-    font-family: Arial, sans-serif;
-    background-image: url(blur.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-background-position: center;
-background-repeat: no-repeat;
-margin:0;
-padding:0;
-display:flex;
-align-items: center;
-justify-content: center;
-height:100vh;
-
-
-
-
-}
-.frontpg{
-    text-align: center;
-    border-radius: 20px;
-    backdrop-filter: blur(2px);
-    padding: 20px;
-
-}
-h1{
-    font-size: 36px;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(blur.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
 }
 
-p{
-    font-size: 18px;
+.quick-access-bar {
+  background-color: #ffffff; /* Set the background color to white */
+  color: #ee5858; /* Set text color to dark */
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
-.button{
 
-    padding: 10px 20px;
-    background-color: #8400ff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    
+.quick-access-bar a {
+  text-decoration: none;
+  color: #333; /* Set the link text color */
+  margin: 0 20px;
+  padding: 5px 10px; /* Add padding to create button-like styling */
+  border: 1px solid #333; /* Add border for the button look */
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
 }
+
+.quick-access-bar a:hover {
+  background-color: #333; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+.frontpg {
+  text-align: center;
+  border-radius: 20px;
+  backdrop-filter: blur(2px);
+  padding: 20px;
+  margin-top: 60px; /* Add margin to create space between the navigation bar and content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+p {
+  font-size: 18px;
+}
+
 .button {
-  --c: #5500ff;
-  --b: .1em;
-  --d: 20px;    
-  
-  --_s: calc(var(--d) + var(--b));
-  color: var(--c);
-  border: solid #0000;
-  border-width: var(--b) var(--b) var(--_s) var(--_s);
-  background:
-    conic-gradient(at left var(--d)  bottom var(--d),
-      #3f869b00 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
-    conic-gradient(at left var(--_s) bottom var(--_s),
-      #ff00ae00 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
-  transform: translate(calc(var(--d)/-1),var(--d));
-  clip-path: 
-    polygon(
-     var(--d) 0%, 
-     var(--d) 0%, 
-     100% 0%, 
-     100% calc(100% - var(--d)),
-     100% calc(100% - var(--d)),
-     var(--d) calc(100% - var(--d))
-    );
-  transition: 0.3s;
+  padding: 10px 20px;
+  background-color: #8400ff;
+  color: #e1e1e1;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
 }
+
+.button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
 .button:hover {
-  transform: translate(0,0);
-  clip-path: 
-    polygon(
-     0% var(--d), 
-     var(--d) 0%, 
-     100% 0%, 
-     100% calc(100% - var(--d)), 
-     calc(100% - var(--d)) 100%, 
-     0% 100%
-   );
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
 }
