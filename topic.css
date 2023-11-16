@@ -1,0 +1,51 @@
+body{
+    align-items: center;
+    background-image: url("bg4.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.topicspg{
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.content{
+    display: inline-block;
+    padding-block: px;
+
+    
+}
+   .content:hover{
+    background-color:rgb(20, 150, 201)
+   }
+.content#cause,#impact,#prep,#response,#recover{
+    display: inline-block;
+    padding:10px;
+    border-style: double;
+    border-radius: 70px;
+    width: 200px;
+    height:25px;
+    align-items: center;
+    text-align: center;
+   margin: 60px;
+    text-decoration: none;
+    color: beige;
+    justify-content: center;
+    backdrop-filter:blur(10px);
+    
+    
+}
+h1{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   padding:40px;
+    color:black
+    width; 100%;
+    justify-content:right;
+    align-items: center;
+    border-style: ridge;
+   background-color: azure;
+   
+}

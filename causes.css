@@ -7,7 +7,7 @@ h1{
     text-align: center;
     font-size:65px
 }
-li{color:burlywood;
+li{color:rgb(8, 107, 23683, 35);
    justify-content:center;
    align-items: center;
    display:flex;
@@ -54,10 +54,9 @@ body{
     justify-content: left;
 
 }
-#next{
-    display:flex
-    justify-content: right;
-}
+
+
+
 .button-container{
     display:flex;
     justify-content: space-between;
