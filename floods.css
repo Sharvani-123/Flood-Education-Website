@@ -2,17 +2,28 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url(blur.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
+  overflow: hidden; /* Hide overflow to prevent scrollbars caused by the video */
+
+  /* Adjust the video styles */
+  position: relative;
+}
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Place the video behind other elements */
+  transform: translateX(-50%) translateY(-50%);
+  filter: blur(2px); /* Adjust the blur intensity */
 }
 
 .quick-access-bar {

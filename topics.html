@@ -1,22 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Topics</title>
     <link rel="stylesheet" href="topics.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff; /* Light blue background */
+            text-align: center;
+            overflow: hidden;
+        }
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            filter: blur(5px); /* Add a bit of blur to the video */
+            z-index: -1; /* Send video to the back */
+        }
+
+        h1 {
+        color: #fff; /* White text color */
+        background-color: rgba(0, 122, 204, 0.7); /* Blue background with transparency */
+        padding: 20px;
+        margin: 0;
+        display: block; /* Set it as a block-level element */
+        width: 100%; /* Expand the width to 100% */
+        animation: flicker 1s infinite alternate; /* CSS animation for flickering effect */
+    }
+
+
+        @keyframes flicker {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0.8;
+            }
+        }
+
+        .topicspg {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh; /* 100% of the viewport height */
+            margin-top: 20px;
+        }
+
+        .button-89 {
+            --b: 3px;   /* border thickness */
+            --s: .45em; /* size of the corner */
+            --color: #373B44;
+            padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+            color: var(--color);
+            --_p: var(--s);
+            background:
+                conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0)
+                var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+            transition: .3s linear, color 0s, background-color 0s;
+            outline: var(--b) solid #0000;
+            outline-offset: .6em;
+            font-size: 16px;
+            border: 0;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            margin: 10px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button-89:hover,
+        .button-89:focus-visible {
+            --_p: 0px;
+            outline-color: var(--color);
+            outline-offset: .05em;
+        }
+
+        .button-89:active {
+            background: var(--color);
+            color: #fff;
+        }
+    </style>
 </head>
+
 <body>
+    <video autoplay muted loop>
+        <source src="upper view flood.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <h1>Flood Awareness Topics</h1>
-    <box-icon type='solid' name='home'></box-icon>
     <div class="topicspg">
-       <p>
-       <a href="causes.html" target="_blank" class="content" id="cause">Causes Of Flood</a>
-       <a href="impacts.html" target="_blank" class="content" id="impact">Impacts Of Flood</a>
-       <a href="flood-preparedness.html" target="_blank" class="content" id="prep">Flood Preparedness</a>
-       <a href="emergency-responses.html" target="_blank" class="content" id="response">Emergency Response</a>
-       <a href="flood-recovery.html" target="_blank" class="content" id="recover" >Flood Recovery</a>
-       </p>
+        <a href="causes.html" target="_blank" class="button-89" id="cause">Causes Of Flood</a>
+        <a href="impacts.html" target="_blank" class="button-89" id="impact">Impacts Of Flood</a>
+        <a href="preparedness.html" target="_blank" class="button-89" id="prep">Flood Preparedness</a>
+        <a href="FLOODRECOVERY.HTML" target="_blank" class="button-89" id="recover">Flood Recovery</a>
     </div>
 </body>
+
 </html>
